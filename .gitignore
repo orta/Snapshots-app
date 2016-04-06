@@ -1,0 +1,41 @@
+# Xcode
+.DS_Store
+build/
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+!default.xcworkspace
+xcuserdata
+profile
+*.moved-aside
+DerivedData
+.idea/
+*.xcscmblueprint
+Pods
+.pt
+.build
+tmtags
+tmtagsHistory
+config/releasenotes.txt
+.bundle
+Podfile.local
+chairs/
+.github
+
+Snapshots.xcodeproj/project.xcworkspace/xcshareddata/
+
+# Artsy Development APN certificate
+net.artsy.artsy.dev.pem
+.clang-format
+
+# Fastlane
+Preview.html
+fastlane/report.xml
+fastlane/Preview.html
+
+iOSInjectionProject/

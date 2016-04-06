@@ -1,0 +1,23 @@
+PODS:
+  - Interstellar (1.4.0):
+    - Interstellar/Core (= 1.4.0)
+    - Interstellar/Warpdrive (= 1.4.0)
+  - Interstellar/Core (1.4.0)
+  - Interstellar/Warpdrive (1.4.0):
+    - Interstellar/Core
+  - Nimble (4.0.0)
+  - Quick (0.9.1)
+
+DEPENDENCIES:
+  - Interstellar
+  - Nimble
+  - Quick
+
+SPEC CHECKSUMS:
+  Interstellar: 40fc666872436d6c1b3524c59437ebdb5dec1c6a
+  Nimble: 72bcc3e2f02242e6bfaaf8d9412ca7bfe3d8b417
+  Quick: a5221fc21788b6aeda934805e68b061839bc3165
+
+PODFILE CHECKSUM: 2344d3eb0de3669e516c69a326f6aead30662280
+
+COCOAPODS: 1.0.0.beta.6

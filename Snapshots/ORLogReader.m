@@ -4,7 +4,7 @@
 
 @interface ORLogReader()
 @property (nonatomic, readonly, strong) NSMutableString *mutableLog;
-
+@property (nonatomic, readwrite, assign) BOOL hasCGErrors;
 @property (nonatomic, readonly, strong) NSMutableOrderedSet *mutableTestSuites;
 @property (nonatomic, readonly, strong) NSMutableOrderedSet *mutableDiffCommands;
 @property (nonatomic, readonly, strong) NSMutableOrderedSet *mutableSnapshotCreations;

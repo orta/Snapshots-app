@@ -2,6 +2,8 @@
 
 @class ORTestCase, ORKaleidoscopeCommand, ORSnapshotCreationReference;
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface ORTestSuite : NSObject
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, strong) NSMutableArray *testCases;
@@ -57,3 +59,5 @@
 
 + (instancetype)referenceFromString:(NSString *)line;
 @end
+
+NS_ASSUME_NONNULL_END

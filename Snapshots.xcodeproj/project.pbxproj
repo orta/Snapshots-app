@@ -21,6 +21,8 @@
 		606B173C1CB536AC002AD8AE /* NSFileManager+RecursiveFind.m in Sources */ = {isa = PBXBuildFile; fileRef = 606B173B1CB536AC002AD8AE /* NSFileManager+RecursiveFind.m */; };
 		606B173F1CB536CA002AD8AE /* ORKaleidoscopeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 606B173E1CB536CA002AD8AE /* ORKaleidoscopeController.m */; };
 		606B17421CB536ED002AD8AE /* NSString+StringBetweenStrings.m in Sources */ = {isa = PBXBuildFile; fileRef = 606B17411CB536ED002AD8AE /* NSString+StringBetweenStrings.m */; };
+		60DDBD9E1CB5A3B500D00894 /* DeveloperDirWatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DDBD9D1CB5A3B500D00894 /* DeveloperDirWatcher.swift */; };
+		60DDBDA01CB5A71200D00894 /* DeveloperDirWatcherSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DDBD9F1CB5A71200D00894 /* DeveloperDirWatcherSpecs.swift */; };
 		A206BE407D4607B7CDF09CF8 /* Pods_Snapshots.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F96B2495A3889E8F237FB984 /* Pods_Snapshots.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +61,8 @@
 		606B173E1CB536CA002AD8AE /* ORKaleidoscopeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORKaleidoscopeController.m; sourceTree = "<group>"; };
 		606B17401CB536ED002AD8AE /* NSString+StringBetweenStrings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+StringBetweenStrings.h"; sourceTree = "<group>"; };
 		606B17411CB536ED002AD8AE /* NSString+StringBetweenStrings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+StringBetweenStrings.m"; sourceTree = "<group>"; };
+		60DDBD9D1CB5A3B500D00894 /* DeveloperDirWatcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeveloperDirWatcher.swift; sourceTree = "<group>"; };
+		60DDBD9F1CB5A71200D00894 /* DeveloperDirWatcherSpecs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeveloperDirWatcherSpecs.swift; sourceTree = "<group>"; };
 		65525D2F2EB5A91986D76090 /* Pods-SnapshotsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapshotsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SnapshotsTests/Pods-SnapshotsTests.release.xcconfig"; sourceTree = "<group>"; };
 		6E3F344343143FA9AAFCC979 /* Pods_SnapshotsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnapshotsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A3BB9CB1F8DE7D97950BE43 /* Pods-SnapshotsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapshotsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SnapshotsTests/Pods-SnapshotsTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -128,6 +132,7 @@
 				606B17321CB5364A002AD8AE /* Logs */,
 				606B17241CB53550002AD8AE /* LogReaderSpecs.swift */,
 				606B17261CB53550002AD8AE /* Info.plist */,
+				60DDBD9F1CB5A71200D00894 /* DeveloperDirWatcherSpecs.swift */,
 			);
 			path = SnapshotsTests;
 			sourceTree = "<group>";
@@ -149,6 +154,7 @@
 				606B17351CB53695002AD8AE /* ORLogReader.m */,
 				606B17361CB53695002AD8AE /* ORTestsSuiteModels.h */,
 				606B17371CB53695002AD8AE /* ORTestsSuiteModels.m */,
+				60DDBD9D1CB5A3B500D00894 /* DeveloperDirWatcher.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -402,6 +408,7 @@
 				606B173C1CB536AC002AD8AE /* NSFileManager+RecursiveFind.m in Sources */,
 				606B173F1CB536CA002AD8AE /* ORKaleidoscopeController.m in Sources */,
 				606B17421CB536ED002AD8AE /* NSString+StringBetweenStrings.m in Sources */,
+				60DDBD9E1CB5A3B500D00894 /* DeveloperDirWatcher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,6 +416,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60DDBDA01CB5A71200D00894 /* DeveloperDirWatcherSpecs.swift in Sources */,
 				606B17251CB53550002AD8AE /* LogReaderSpecs.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

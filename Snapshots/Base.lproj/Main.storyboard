@@ -801,15 +801,28 @@
                                                             <rect key="frame" x="1" y="1" width="192" height="17"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
-                                                                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wDD-HL-WGa">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="17"/>
-                                                                    <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="uxI-Yb-GNN">
+                                                                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="wDD-HL-WGa">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="191" height="17"/>
+                                                                    <textFieldCell key="cell" lineBreakMode="truncatingHead" sendsActionOnEndEditing="YES" title="Table View Cell" id="uxI-Yb-GNN">
                                                                         <font key="font" metaFont="system"/>
                                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                                        <connections>
+                                                                            <binding destination="727-oK-uWM" name="displayPatternValue1" keyPath="objectValue" id="uJt-8d-1Iw">
+                                                                                <dictionary key="options">
+                                                                                    <string key="NSDisplayPattern">%{value1}@</string>
+                                                                                </dictionary>
+                                                                            </binding>
+                                                                        </connections>
                                                                     </textFieldCell>
                                                                 </textField>
                                                             </subviews>
+                                                            <constraints>
+                                                                <constraint firstAttribute="bottom" secondItem="wDD-HL-WGa" secondAttribute="bottom" id="0Dx-uY-ipm"/>
+                                                                <constraint firstItem="wDD-HL-WGa" firstAttribute="leading" secondItem="727-oK-uWM" secondAttribute="leading" constant="2" id="OjP-FY-fXd"/>
+                                                                <constraint firstItem="wDD-HL-WGa" firstAttribute="top" secondItem="727-oK-uWM" secondAttribute="top" id="n7A-3n-uxS"/>
+                                                                <constraint firstAttribute="trailing" secondItem="wDD-HL-WGa" secondAttribute="trailing" constant="3" id="wMc-OR-uKr"/>
+                                                            </constraints>
                                                             <connections>
                                                                 <outlet property="textField" destination="wDD-HL-WGa" id="mm1-VR-0V4"/>
                                                             </connections>
@@ -817,6 +830,9 @@
                                                     </prototypeCellViews>
                                                 </tableColumn>
                                             </tableColumns>
+                                            <connections>
+                                                <binding destination="i96-Fe-0NL" name="content" keyPath="self.pathsForSelectedApp" id="mBf-g8-nvc"/>
+                                            </connections>
                                         </tableView>
                                     </subviews>
                                     <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -853,12 +869,19 @@
                     </view>
                     <connections>
                         <outlet property="appsDataSource" destination="lee-Cc-we3" id="veS-bs-Qe3"/>
+                        <outlet property="logsDataSource" destination="i96-Fe-0NL" id="aKp-z1-6hM"/>
                         <outlet property="sourceList" destination="zYS-3L-wFI" id="BXd-nS-Uhj"/>
+                        <outlet property="sourceListDelegate" destination="Ghx-Q7-f1M" id="FSl-20-vDf"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <customObject id="lee-Cc-we3" customClass="SourceListDataSource" customModule="Snapshots" customModuleProvider="target"/>
                 <customObject id="Ghx-Q7-f1M" customClass="SourceListController" customModule="Snapshots" customModuleProvider="target"/>
+                <customObject id="i96-Fe-0NL" customClass="SnapshotLogDataSource" customModule="Snapshots" customModuleProvider="target">
+                    <connections>
+                        <outlet property="logsTableView" destination="cmP-7a-1QA" id="2OQ-BQ-mTH"/>
+                    </connections>
+                </customObject>
             </objects>
             <point key="canvasLocation" x="641" y="297.5"/>
         </scene>

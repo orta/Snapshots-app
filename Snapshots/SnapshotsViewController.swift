@@ -1,11 +1,17 @@
 import Cocoa
 import PXSourceList
+import Interstellar
+import FileKit
 
 class SnapshotsViewController: NSViewController {
 
+    let reader = ORLogReader()
     let dev = DeveloperDirWatcher()
 
+    @IBOutlet var sourceListDelegate: SourceListController!
     @IBOutlet var appsDataSource: SourceListDataSource!
+    @IBOutlet var logsDataSource: SnapshotLogDataSource!
+
     @IBOutlet weak var sourceList: PXSourceList!
 
     override func viewDidLoad() {
@@ -17,12 +23,42 @@ class SnapshotsViewController: NSViewController {
             self.appsDataSource.updateNames(names)
             self.sourceList.reloadData()
         }
+
+        sourceListDelegate.appSelected.next { app in
+            self.dev.getLogsForApp(app.name) { paths in
+                self.logsDataSource.pathsForSelectedApp = paths.map { $0.rawValue }
+            }
+        }
+
+        logsDataSource.logSelected.next { path in
+            
+        }
     }
-    
 }
 
+class SnapshotLogDataSource: NSObject {
+    dynamic var pathsForSelectedApp = [NSString]()
+
+    let logSelected = Signal<String>()
+
+    @IBOutlet weak var logsTableView: NSTableView!
+
+    override func awakeFromNib() {
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(selectionChanged), name: NSTableViewSelectionDidChangeNotification, object: logsTableView)
+    }
+
+    deinit {
+        NSNotificationCenter.defaultCenter().removeObserver(self)
+    }
+
+    func selectionChanged(notification: NSNotificationCenter) {
+        logSelected.update("")
+    }
+}
 
 class SourceListController: NSObject, PXSourceListDelegate {
+
+    let appSelected = Signal<App>()
 
     func sourceList(aSourceList: PXSourceList!, isGroupAlwaysExpanded group: AnyObject!) -> Bool {
         return true
@@ -42,6 +78,14 @@ class SourceListController: NSObject, PXSourceListDelegate {
 
         cellView.textField?.stringValue = app.prettyName
         return cellView;
+    }
+
+    func sourceListSelectionDidChange(notification: NSNotification!) {
+        let sourceList = notification.object as! PXSourceList
+        guard let newSelectedItem = sourceList.itemAtRow(sourceList.selectedRow) as? PXSourceListItem else { return }
+        guard let app = newSelectedItem.representedObject as? App else { return }
+
+        appSelected.update(app)
     }
 }
 
@@ -83,3 +127,6 @@ class SourceListDataSource: NSObject, PXSourceListDataSource {
         return NSObject()
     }
 }
+
+
+

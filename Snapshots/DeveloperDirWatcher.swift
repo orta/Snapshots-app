@@ -39,10 +39,17 @@ class DeveloperDirWatcher: NSObject {
         }
     }
 
-    func getLogsForApp(name: String) -> [Path] {
-        let appLogs = library + derivedDataDir + name + "Logs" + "Test"
-        return appLogs.find(searchDepth: 0) { path in
-            return path.pathExtension == "xcactivitylog"
+    func getLogsForApp(name: String, completion: ([Path]) -> ()) {
+        Async.background {
+
+            let appLogs = self.library + self.derivedDataDir + name + "Logs" + "Test"
+            let paths = appLogs.find(searchDepth: 0) { path in
+                return path.pathExtension == "xcactivitylog"
+            }
+
+            Async.main {
+                completion(paths)
+            }
         }
     }
 }

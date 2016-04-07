@@ -8,6 +8,7 @@ PODS:
   - Interstellar/Warpdrive (1.4.0):
     - Interstellar/Core
   - Nimble (4.0.0)
+  - PXSourceList (2.0.7)
   - Quick (0.9.1)
 
 DEPENDENCIES:
@@ -15,6 +16,7 @@ DEPENDENCIES:
   - FileKit
   - Interstellar
   - Nimble
+  - PXSourceList
   - Quick
 
 SPEC CHECKSUMS:
@@ -22,8 +24,9 @@ SPEC CHECKSUMS:
   FileKit: fd360f82f62a1f70dd2ccdbe0950d3a6d1e25d1d
   Interstellar: 40fc666872436d6c1b3524c59437ebdb5dec1c6a
   Nimble: 72bcc3e2f02242e6bfaaf8d9412ca7bfe3d8b417
+  PXSourceList: 8e37978a5db6c8d8d255f8913603bcea322c6445
   Quick: a5221fc21788b6aeda934805e68b061839bc3165
 
-PODFILE CHECKSUM: 6dddcfcdb019c9e5356fd068af2bd2fd67526c65
+PODFILE CHECKSUM: a9b50005461c9a49d1dca176a558f21fd8b28de5
 
 COCOAPODS: 1.0.0.beta.6

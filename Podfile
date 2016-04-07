@@ -5,6 +5,7 @@ target 'Snapshots' do
   pod 'Interstellar'
   pod 'FileKit'
   pod 'AsyncSwift'
+  pod 'PXSourceList'
 
   target 'SnapshotsTests' do
     inherit! :search_paths

@@ -8,19 +8,22 @@ class DeveloperDirWatcher: NSObject {
     var library = Path.UserLibrary
     var derivedDataDir = "Developer/Xcode/DerivedData"
 
-    let appNamesUpdateSignal = Signal<[NSString]>()
+    let appNamesUpdateSignal = Signal<[App]>()
+    let appUpdatedSignal = Signal<App>()
 
     func startParsing() {
         Async.background {
-            let names = self.getAllAppNamesWithTests()
-            Async.main {
-                self.appNamesUpdateSignal.update(names)
-            }
+            let apps = self.getAllAppNamesWithTests()
+            Async.main { self.appNamesUpdateSignal.update(apps) }
 
+//            for app in apps {
+//                self.getLogsForApp(app.name)
+//                Async.main { self.appUpdatedSignal.update(app) }
+//            }
         }
     }
 
-    func getAllAppNamesWithTests() -> [String] {
+    func getAllAppNamesWithTests() -> [App] {
         Path.fileManager = fileManager
 
         let derived = library + derivedDataDir
@@ -32,16 +35,14 @@ class DeveloperDirWatcher: NSObject {
         // "/Users/orta/Library/Developer/Xcode/DerivedData/Aerodramus-elioeeoyxfebivbqkcrplnueiqkk/Logs/Test"
 
         return paths.flatMap { path in
-            return path.parent.parent.fileName
+            return App(name: path.parent.parent.fileName)
         }
     }
 
     func getLogsForApp(name: String) -> [Path] {
-        let appLogs = library + derivedDataDir + name + "Tests" + "Logs"
-        return appLogs.find(searchDepth: 3) { path in
+        let appLogs = library + derivedDataDir + name + "Logs" + "Test"
+        return appLogs.find(searchDepth: 0) { path in
             return path.pathExtension == "xcactivitylog"
         }
-
     }
-
 }

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0C4D3DF5D7335DD281373145 /* Pods_SnapshotsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E3F344343143FA9AAFCC979 /* Pods_SnapshotsTests.framework */; };
+		60226A2C1CB6489500C1E3D5 /* SnapshotsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60226A2B1CB6489500C1E3D5 /* SnapshotsViewController.swift */; };
 		606B17101CB53433002AD8AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606B170F1CB53433002AD8AE /* AppDelegate.swift */; };
 		606B17121CB53433002AD8AE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606B17111CB53433002AD8AE /* ViewController.swift */; };
 		606B17141CB53433002AD8AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 606B17131CB53433002AD8AE /* Assets.xcassets */; };
@@ -23,6 +24,11 @@
 		606B17421CB536ED002AD8AE /* NSString+StringBetweenStrings.m in Sources */ = {isa = PBXBuildFile; fileRef = 606B17411CB536ED002AD8AE /* NSString+StringBetweenStrings.m */; };
 		60DDBD9E1CB5A3B500D00894 /* DeveloperDirWatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DDBD9D1CB5A3B500D00894 /* DeveloperDirWatcher.swift */; };
 		60DDBDA01CB5A71200D00894 /* DeveloperDirWatcherSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DDBD9F1CB5A71200D00894 /* DeveloperDirWatcherSpecs.swift */; };
+		60DDBDA21CB641DB00D00894 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DDBDA11CB641DB00D00894 /* App.swift */; };
+		60DDBDA81CB6452300D00894 /* ORSlidingImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60DDBDA51CB6452300D00894 /* ORSlidingImageView.m */; };
+		60DDBDA91CB6452300D00894 /* ARLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 60DDBDA71CB6452300D00894 /* ARLabel.m */; };
+		60DDBDAC1CB6456C00D00894 /* NSColor+ORSnapshotColours.m in Sources */ = {isa = PBXBuildFile; fileRef = 60DDBDAB1CB6456C00D00894 /* NSColor+ORSnapshotColours.m */; };
+		60DDBDAE1CB6458400D00894 /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60DDBDAD1CB6458400D00894 /* Quartz.framework */; };
 		A206BE407D4607B7CDF09CF8 /* Pods_Snapshots.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F96B2495A3889E8F237FB984 /* Pods_Snapshots.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +44,7 @@
 
 /* Begin PBXFileReference section */
 		51B8E3D4494703C87BB76050 /* Pods-Snapshots.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Snapshots.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Snapshots/Pods-Snapshots.debug.xcconfig"; sourceTree = "<group>"; };
+		60226A2B1CB6489500C1E3D5 /* SnapshotsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotsViewController.swift; sourceTree = "<group>"; };
 		602842691CB5397C00212619 /* BridgingHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
 		606B170C1CB53433002AD8AE /* Snapshots.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Snapshots.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		606B170F1CB53433002AD8AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +70,14 @@
 		606B17411CB536ED002AD8AE /* NSString+StringBetweenStrings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+StringBetweenStrings.m"; sourceTree = "<group>"; };
 		60DDBD9D1CB5A3B500D00894 /* DeveloperDirWatcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeveloperDirWatcher.swift; sourceTree = "<group>"; };
 		60DDBD9F1CB5A71200D00894 /* DeveloperDirWatcherSpecs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeveloperDirWatcherSpecs.swift; sourceTree = "<group>"; };
+		60DDBDA11CB641DB00D00894 /* App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		60DDBDA41CB6452300D00894 /* ORSlidingImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORSlidingImageView.h; sourceTree = "<group>"; };
+		60DDBDA51CB6452300D00894 /* ORSlidingImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORSlidingImageView.m; sourceTree = "<group>"; };
+		60DDBDA61CB6452300D00894 /* ARLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARLabel.h; sourceTree = "<group>"; };
+		60DDBDA71CB6452300D00894 /* ARLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARLabel.m; sourceTree = "<group>"; };
+		60DDBDAA1CB6456C00D00894 /* NSColor+ORSnapshotColours.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSColor+ORSnapshotColours.h"; sourceTree = "<group>"; };
+		60DDBDAB1CB6456C00D00894 /* NSColor+ORSnapshotColours.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSColor+ORSnapshotColours.m"; sourceTree = "<group>"; };
+		60DDBDAD1CB6458400D00894 /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
 		65525D2F2EB5A91986D76090 /* Pods-SnapshotsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapshotsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SnapshotsTests/Pods-SnapshotsTests.release.xcconfig"; sourceTree = "<group>"; };
 		6E3F344343143FA9AAFCC979 /* Pods_SnapshotsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnapshotsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A3BB9CB1F8DE7D97950BE43 /* Pods-SnapshotsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapshotsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SnapshotsTests/Pods-SnapshotsTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -75,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60DDBDAE1CB6458400D00894 /* Quartz.framework in Frameworks */,
 				A206BE407D4607B7CDF09CF8 /* Pods_Snapshots.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -90,6 +106,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		60226A2D1CB648CB00C1E3D5 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				606B173D1CB536CA002AD8AE /* ORKaleidoscopeController.h */,
+				606B173E1CB536CA002AD8AE /* ORKaleidoscopeController.m */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
 		606B17031CB53433002AD8AE = {
 			isa = PBXGroup;
 			children = (
@@ -113,7 +138,9 @@
 		606B170E1CB53433002AD8AE /* Snapshots */ = {
 			isa = PBXGroup;
 			children = (
-				606B17441CB53710002AD8AE /* Contexts */,
+				60226A2D1CB648CB00C1E3D5 /* Helpers */,
+				60DDBDA31CB644DA00D00894 /* Views */,
+				606B17441CB53710002AD8AE /* App */,
 				606B17431CB53706002AD8AE /* Extensions */,
 				606B17331CB5368D002AD8AE /* Models */,
 				606B170F1CB53433002AD8AE /* AppDelegate.swift */,
@@ -155,6 +182,7 @@
 				606B17361CB53695002AD8AE /* ORTestsSuiteModels.h */,
 				606B17371CB53695002AD8AE /* ORTestsSuiteModels.m */,
 				60DDBD9D1CB5A3B500D00894 /* DeveloperDirWatcher.swift */,
+				60DDBDA11CB641DB00D00894 /* App.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -162,6 +190,8 @@
 		606B17431CB53706002AD8AE /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				60DDBDAA1CB6456C00D00894 /* NSColor+ORSnapshotColours.h */,
+				60DDBDAB1CB6456C00D00894 /* NSColor+ORSnapshotColours.m */,
 				606B17401CB536ED002AD8AE /* NSString+StringBetweenStrings.h */,
 				606B17411CB536ED002AD8AE /* NSString+StringBetweenStrings.m */,
 				606B173A1CB536AC002AD8AE /* NSFileManager+RecursiveFind.h */,
@@ -170,13 +200,23 @@
 			name = Extensions;
 			sourceTree = "<group>";
 		};
-		606B17441CB53710002AD8AE /* Contexts */ = {
+		606B17441CB53710002AD8AE /* App */ = {
 			isa = PBXGroup;
 			children = (
-				606B173D1CB536CA002AD8AE /* ORKaleidoscopeController.h */,
-				606B173E1CB536CA002AD8AE /* ORKaleidoscopeController.m */,
+				60226A2B1CB6489500C1E3D5 /* SnapshotsViewController.swift */,
 			);
-			name = Contexts;
+			name = App;
+			sourceTree = "<group>";
+		};
+		60DDBDA31CB644DA00D00894 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				60DDBDA41CB6452300D00894 /* ORSlidingImageView.h */,
+				60DDBDA51CB6452300D00894 /* ORSlidingImageView.m */,
+				60DDBDA61CB6452300D00894 /* ARLabel.h */,
+				60DDBDA71CB6452300D00894 /* ARLabel.m */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		9CF147320CE4B216A7565A4A /* Pods */ = {
@@ -193,6 +233,7 @@
 		A1032C1B8014B6EA9EE07A7A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				60DDBDAD1CB6458400D00894 /* Quartz.framework */,
 				F96B2495A3889E8F237FB984 /* Pods_Snapshots.framework */,
 				6E3F344343143FA9AAFCC979 /* Pods_SnapshotsTests.framework */,
 			);
@@ -401,13 +442,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60DDBDA21CB641DB00D00894 /* App.swift in Sources */,
+				60DDBDAC1CB6456C00D00894 /* NSColor+ORSnapshotColours.m in Sources */,
 				606B17121CB53433002AD8AE /* ViewController.swift in Sources */,
 				606B17391CB53695002AD8AE /* ORTestsSuiteModels.m in Sources */,
+				60226A2C1CB6489500C1E3D5 /* SnapshotsViewController.swift in Sources */,
 				606B17381CB53695002AD8AE /* ORLogReader.m in Sources */,
 				606B17101CB53433002AD8AE /* AppDelegate.swift in Sources */,
 				606B173C1CB536AC002AD8AE /* NSFileManager+RecursiveFind.m in Sources */,
 				606B173F1CB536CA002AD8AE /* ORKaleidoscopeController.m in Sources */,
 				606B17421CB536ED002AD8AE /* NSString+StringBetweenStrings.m in Sources */,
+				60DDBDA91CB6452300D00894 /* ARLabel.m in Sources */,
+				60DDBDA81CB6452300D00894 /* ORSlidingImageView.m in Sources */,
 				60DDBD9E1CB5A3B500D00894 /* DeveloperDirWatcher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -5,18 +5,13 @@
 
 + (BOOL)isInstalled
 {
-    BOOL found = NO;
-    CFURLRef appURL = NULL;
-    OSStatus result = LSFindApplicationForInfo ( kLSUnknownCreator,CFSTR("com.blackpixel.kaleidoscope"), NULL,NULL,&appURL );
-    switch(result) {
-        case noErr:
-            found = YES;
-    }
+    //  If no application could be found,
+    // *    NULL is returned and outError (if not NULL) is populated with kLSApplicationNotFoundErr.
 
-    if (appURL) {
-        CFRelease(appURL);
-    }
-    return found;
+    CFErrorRef error = NULL;
+    CFArrayRef result = LSCopyApplicationURLsForBundleIdentifier (CFSTR("com.blackpixel.kaleidoscope"), &error );
+    if (result) {  CFRelease(result); }
+    return error != nil;
 }
 
 @end

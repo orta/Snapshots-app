@@ -6,9 +6,11 @@ NS_ASSUME_NONNULL_BEGIN
 @interface ORLogReader : NSObject
 
 - (void)readLog:(NSString *)log;
+- (void)erase;
 
 - (NSArray <ORKaleidoscopeCommand *>*)uniqueDiffCommands;
 - (NSArray <ORKaleidoscopeCommand *>*)ksdiffCommands;
+- (NSArray <ORSnapshotCreationReference *>*)newSnapshots;
 
 - (NSArray <ORTestSuite *>*)testSuites;
 

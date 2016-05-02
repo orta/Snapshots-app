@@ -680,7 +680,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="192" height="525"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <outlineView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="sourceList" multipleSelection="NO" autosaveColumns="NO" rowHeight="24" rowSizeStyle="systemDefault" viewBased="YES" indentationPerLevel="16" outlineTableColumn="HLd-2c-MXe" id="zYS-3L-wFI" customClass="PXSourceList">
+                                        <outlineView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="sourceList" multipleSelection="NO" emptySelection="NO" autosaveColumns="NO" rowHeight="24" rowSizeStyle="systemDefault" viewBased="YES" indentationPerLevel="16" outlineTableColumn="HLd-2c-MXe" id="zYS-3L-wFI" customClass="PXSourceList">
                                             <rect key="frame" x="0.0" y="0.0" width="192" height="525"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <size key="intercellSpacing" width="3" height="2"/>
@@ -763,7 +763,7 @@
                                     <nil key="backgroundColor"/>
                                 </clipView>
                                 <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="wDW-ng-EU2">
-                                    <rect key="frame" x="1" y="-15" width="0.0" height="16"/>
+                                    <rect key="frame" x="0.0" y="510" width="0.0" height="15"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="xPj-Zx-qOx">
@@ -772,13 +772,13 @@
                                 </scroller>
                             </scrollView>
                             <scrollView ambiguous="YES" misplaced="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="65O-vi-uy2">
-                                <rect key="frame" x="192" y="0.0" width="195" height="525"/>
+                                <rect key="frame" x="192" y="31" width="195" height="494"/>
                                 <clipView key="contentView" ambiguous="YES" id="bHY-92-TAk">
-                                    <rect key="frame" x="0.0" y="0.0" width="195" height="525"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="195" height="494"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" viewBased="YES" id="cmP-7a-1QA">
-                                            <rect key="frame" x="0.0" y="0.0" width="195" height="525"/>
+                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" emptySelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" viewBased="YES" id="cmP-7a-1QA">
+                                            <rect key="frame" x="0.0" y="0.0" width="195" height="494"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <size key="intercellSpacing" width="3" height="2"/>
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -808,7 +808,7 @@
                                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                         <connections>
-                                                                            <binding destination="727-oK-uWM" name="displayPatternValue1" keyPath="objectValue" id="uJt-8d-1Iw">
+                                                                            <binding destination="727-oK-uWM" name="displayPatternValue1" keyPath="objectValue.name" id="gzi-Fy-8Zd">
                                                                                 <dictionary key="options">
                                                                                     <string key="NSDisplayPattern">%{value1}@</string>
                                                                                 </dictionary>
@@ -831,14 +831,14 @@
                                                 </tableColumn>
                                             </tableColumns>
                                             <connections>
-                                                <binding destination="i96-Fe-0NL" name="content" keyPath="self.pathsForSelectedApp" id="mBf-g8-nvc"/>
+                                                <binding destination="i96-Fe-0NL" name="content" keyPath="logsForSelectedApp" id="qf7-3B-mF0"/>
                                             </connections>
                                         </tableView>
                                     </subviews>
                                     <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </clipView>
                                 <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="Yhc-cN-Pj4">
-                                    <rect key="frame" x="0.0" y="509" width="0.0" height="16"/>
+                                    <rect key="frame" x="0.0" y="480" width="0.0" height="15"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="ekR-FE-rWn">
@@ -863,7 +863,7 @@
                             <constraint firstItem="65O-vi-uy2" firstAttribute="leading" secondItem="xEZ-Sz-1pi" secondAttribute="trailing" id="aud-RO-Ru3"/>
                             <constraint firstItem="xEZ-Sz-1pi" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="enJ-a9-8fw"/>
                             <constraint firstItem="xEZ-Sz-1pi" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="myj-Fe-FGQ"/>
-                            <constraint firstAttribute="bottom" secondItem="65O-vi-uy2" secondAttribute="bottom" id="qRP-II-ewD"/>
+                            <constraint firstAttribute="bottom" secondItem="65O-vi-uy2" secondAttribute="bottom" constant="30" id="qRP-II-ewD"/>
                             <constraint firstAttribute="bottom" secondItem="16x-4r-dnK" secondAttribute="bottom" id="tjL-tm-Q9Y"/>
                         </constraints>
                     </view>
@@ -906,10 +906,10 @@
             </objects>
             <point key="canvasLocation" x="1392" y="300.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Log Snapshots Preview View Controller-->
         <scene sceneID="ez1-jL-jRp">
             <objects>
-                <viewController id="vdn-Ri-uIG" sceneMemberID="viewController">
+                <viewController id="vdn-Ri-uIG" customClass="LogSnapshotsPreviewViewController" customModule="Snapshots" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="SGc-sT-xe9">
                         <rect key="frame" x="0.0" y="0.0" width="615" height="465"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -919,6 +919,10 @@
                                 <ikCellsStyle key="cellsStyleMask" shadowed="YES" titled="YES"/>
                                 <autoresizingMask key="contentResizingMask" heightSizable="YES"/>
                                 <size key="cellSize" width="96" height="96"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="vdn-Ri-uIG" id="r9c-RI-C5o"/>
+                                    <outlet property="delegate" destination="vdn-Ri-uIG" id="UPP-6h-tk7"/>
+                                </connections>
                             </ikImageBrowserView>
                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" misplaced="YES" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nXM-ov-iqV">
                                 <rect key="frame" x="13" y="438" width="584" height="20"/>
@@ -939,6 +943,10 @@
                             <constraint firstItem="nXM-ov-iqV" firstAttribute="top" secondItem="SGc-sT-xe9" secondAttribute="top" constant="7" id="pYE-IB-7lv"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageBrowser" destination="klC-Ub-N9w" id="IiH-Cr-ZhR"/>
+                        <outlet property="titleTextField" destination="nXM-ov-iqV" id="KQW-eI-YEV"/>
+                    </connections>
                 </viewController>
                 <customObject id="ddO-By-wOw" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>

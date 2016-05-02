@@ -5,7 +5,6 @@ import FileKit
 
 class SnapshotsViewController: NSViewController {
 
-    let reader = ORLogReader()
     let dev = DeveloperDirWatcher()
 
     @IBOutlet var sourceListDelegate: SourceListController!
@@ -19,27 +18,46 @@ class SnapshotsViewController: NSViewController {
 
         dev.startParsing()
 
-        dev.appNamesUpdateSignal.next { names in
+        dev.appsWithMetadataUpdatedSignal.next { names in
             self.appsDataSource.updateNames(names)
             self.sourceList.reloadData()
         }
 
         sourceListDelegate.appSelected.next { app in
-            self.dev.getLogsForApp(app.name) { paths in
-                self.logsDataSource.pathsForSelectedApp = paths.map { $0.rawValue }
+            let date = NSDate()
+            self.dev.getLogsForApp(app.name).next { paths in
+                print(date.timeIntervalSinceNow)
+                app.logs = paths.map { Log(path: $0) }
+
+                self.logsDataSource.logsForSelectedApp = app.logs
+                app.readLogs()
             }
         }
 
-        logsDataSource.logSelected.next { path in
-            
+        logsDataSource.logSelected.next { log in
+            let s = self.snapshotsPreviewController
+            s.newLogSelected.update(log)
         }
+    }
+
+    var splitController: NSSplitViewController {
+        return childViewControllers.filter { $0.isKindOfClass(NSSplitViewController) }.first! as! NSSplitViewController
+    }
+
+
+    var snapshotsPreviewController: LogSnapshotsPreviewViewController {
+        return splitController.childViewControllers.filter { $0.isKindOfClass(LogSnapshotsPreviewViewController) }.first! as! LogSnapshotsPreviewViewController
     }
 }
 
-class SnapshotLogDataSource: NSObject {
-    dynamic var pathsForSelectedApp = [NSString]()
+class SnapshotLogController: NSObject {
+    let reader = ORLogReader()
+}
 
-    let logSelected = Signal<String>()
+class SnapshotLogDataSource: NSObject {
+    dynamic var logsForSelectedApp = [Log]()
+
+    let logSelected = Signal<Log>()
 
     @IBOutlet weak var logsTableView: NSTableView!
 
@@ -51,8 +69,11 @@ class SnapshotLogDataSource: NSObject {
         NSNotificationCenter.defaultCenter().removeObserver(self)
     }
 
-    func selectionChanged(notification: NSNotificationCenter) {
-        logSelected.update("")
+    func selectionChanged(notification: NSNotification) {
+        guard let table = notification.object as? NSTableView else { return }
+        if table.selectedRow >= 0 {
+            logSelected.update(logsForSelectedApp[table.selectedRow])
+        }
     }
 }
 
@@ -92,6 +113,7 @@ class SourceListController: NSObject, PXSourceListDelegate {
 class SourceListDataSource: NSObject, PXSourceListDataSource {
 
     var snapshots = PXSourceListItem(title: "Snapshots", identifier: "root")
+
     var sourceListItems = [PXSourceListItem]()
 
     var rootNodes: [PXSourceListItem] {
@@ -100,10 +122,10 @@ class SourceListDataSource: NSObject, PXSourceListDataSource {
 
     func updateNames(apps: [App]) {
         snapshots.removeChildItems(snapshots.children)
-        let children:[PXSourceListItem] = apps.map {
+        let useful:[PXSourceListItem] = apps.filter { $0.logs.isEmpty == false }.map {
             return PXSourceListItem(representedObject: $0, icon:nil)
         }
-        snapshots.children = children
+        snapshots.children = useful
     }
 
     func sourceList(aSourceList: PXSourceList!, child index: UInt, ofItem item: AnyObject!) -> AnyObject! {

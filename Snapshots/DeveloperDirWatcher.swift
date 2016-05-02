@@ -9,17 +9,24 @@ class DeveloperDirWatcher: NSObject {
     var derivedDataDir = "Developer/Xcode/DerivedData"
 
     let appNamesUpdateSignal = Signal<[App]>()
+    let appsWithMetadataUpdatedSignal = Signal<[App]>()
+
     let appUpdatedSignal = Signal<App>()
 
     func startParsing() {
         Async.background {
             let apps = self.getAllAppNamesWithTests()
-            Async.main { self.appNamesUpdateSignal.update(apps) }
+            let sorted = apps.sort { $0.lastUpdated.compare($1.lastUpdated) == .OrderedDescending }
 
-//            for app in apps {
-//                self.getLogsForApp(app.name)
-//                Async.main { self.appUpdatedSignal.update(app) }
-//            }
+            // Optional, note used though
+            Async.main { self.appNamesUpdateSignal.update(sorted) }
+
+            for app in apps {
+                self.getLogsForApp(app.name).next { app.logs = $0.map { Log(path: $0) } }
+            }
+
+            Async.main { self.appsWithMetadataUpdatedSignal.update(sorted) }
+
         }
     }
 
@@ -35,21 +42,14 @@ class DeveloperDirWatcher: NSObject {
         // "/Users/orta/Library/Developer/Xcode/DerivedData/Aerodramus-elioeeoyxfebivbqkcrplnueiqkk/Logs/Test"
 
         return paths.flatMap { path in
-            return App(name: path.parent.parent.fileName)
+            let date = path.modificationDate ?? NSDate.distantPast()
+            return App(name: path.parent.parent.fileName, date: date)
         }
     }
 
-    func getLogsForApp(name: String, completion: ([Path]) -> ()) {
-        Async.background {
-
-            let appLogs = self.library + self.derivedDataDir + name + "Logs" + "Test"
-            let paths = appLogs.find(searchDepth: 0) { path in
-                return path.pathExtension == "xcactivitylog"
-            }
-
-            Async.main {
-                completion(paths)
-            }
-        }
+    func getLogsForApp(name: String) -> Signal<[Path]> {
+        let appLogs = self.library + self.derivedDataDir + name + "Logs" + "Test"
+        let queries = ["replace recordSnapshot with a check", "successfully recorded"]
+        return Grepper.getPathsMatchingPattern(queries, fromPath: appLogs)
     }
 }

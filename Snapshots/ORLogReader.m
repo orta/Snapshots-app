@@ -102,7 +102,6 @@
 - (BOOL)hasNewSnapshots
 {
     return (self.mutableSnapshotCreations.count > 0);
-
 }
 
 - (BOOL)hasSnapshotTestErrors
@@ -125,6 +124,11 @@
     return [commands filteredArrayUsingPredicate:[NSPredicate predicateWithBlock:^BOOL(ORKaleidoscopeCommand *command, NSDictionary *bindings) {
         return [[NSFileManager defaultManager] contentsEqualAtPath:command.afterPath andPath:command.beforePath] == NO;
     }]];
+}
+
+- (NSArray <ORSnapshotCreationReference *>*)newSnapshots
+{
+    return _mutableSnapshotCreations.array;
 }
 
 - (void)erase

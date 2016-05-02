@@ -1,0 +1,253 @@
+(void *) $0 = 0x00007ff56360c1e0
+(void *) $1 = 0x0000000000000000
+(void *) $2 = 0x0000000000000000
+2016-04-07 13:11:12.276 Artsy[48558:11314806]  INFO: Reveal Server started (Protocol Version 25).
+2016-04-07 13:11:12.302 Artsy[48558:11314806] iRate did not prompt for rating because the user has already rated this version
+2016-04-07 13:11:12.302 Artsy[48558:11316006] iRate is checking http://itunes.apple.com/US/lookup?bundleId=net.artsy.artsy to retrieve the App Store details...
+13:11:12.424 Artsy[48558:11316013] _XCT_testBundleReadyWithProtocolVersion:minimumVersion: reply received
+13:11:12.424 Artsy[48558:11315788] _IDE_startExecutingTestPlanWithProtocolVersion:16
+Pending: looks good by default
+Test Suite 'Selected tests' started at 2016-04-07 13:11:12.887
+Test Suite 'Artsy Tests.xctest' started at 2016-04-07 13:11:12.888
+Test Suite 'LiveAuctionBidButtonTests' started at 2016-04-07 13:11:12.888
+Test Case '-[Artsy_Tests.LiveAuctionBidButtonTests has_valid_snapshot_upcoming]' started.
+Test Case '-[Artsy_Tests.LiveAuctionBidButtonTests has_valid_snapshot_upcoming]' passed (0.017 seconds).
+Test Case '-[Artsy_Tests.LiveAuctionBidButtonTests has_valid_snapshot_sold]' started.
+Test Case '-[Artsy_Tests.LiveAuctionBidButtonTests has_valid_snapshot_sold]' passed (0.006 seconds).
+Test Case '-[Artsy_Tests.LiveAuctionBidButtonTests has_valid_snapshot_failed]' started.
+Test Case '-[Artsy_Tests.LiveAuctionBidButtonTests has_valid_snapshot_failed]' passed (0.005 seconds).
+Test Case '-[Artsy_Tests.LiveAuctionBidButtonTests has_valid_snapshot_closed]' started.
+Test Case '-[Artsy_Tests.LiveAuctionBidButtonTests has_valid_snapshot_closed]' passed (0.005 seconds).
+Test Case '-[Artsy_Tests.LiveAuctionBidButtonTests has_valid_snapshot_waiting]' started.
+Test Case '-[Artsy_Tests.LiveAuctionBidButtonTests has_valid_snapshot_waiting]' passed (0.006 seconds).
+Test Case '-[Artsy_Tests.LiveAuctionBidButtonTests has_valid_snapshot_trial]' started.
+Test Case '-[Artsy_Tests.LiveAuctionBidButtonTests has_valid_snapshot_trial]' passed (0.009 seconds).
+Test Case '-[Artsy_Tests.LiveAuctionBidButtonTests has_valid_snapshot_biddable]' started.
+Test Case '-[Artsy_Tests.LiveAuctionBidButtonTests has_valid_snapshot_biddable]' passed (0.005 seconds).
+Test Case '-[Artsy_Tests.LiveAuctionBidButtonTests has_valid_snapshot_max_bidder]' started.
+Test Case '-[Artsy_Tests.LiveAuctionBidButtonTests has_valid_snapshot_max_bidder]' passed (0.007 seconds).
+Test Case '-[Artsy_Tests.LiveAuctionBidButtonTests has_valid_snapshot_not_max_bidder]' started.
+Test Case '-[Artsy_Tests.LiveAuctionBidButtonTests has_valid_snapshot_not_max_bidder]' passed (0.005 seconds).
+Test Case '-[Artsy_Tests.LiveAuctionBidButtonTests has_valid_snapshot_in_progress]' started.
+Test Case '-[Artsy_Tests.LiveAuctionBidButtonTests has_valid_snapshot_in_progress]' passed (0.005 seconds).
+Test Suite 'LiveAuctionBidButtonTests' passed at 2016-04-07 13:11:12.965.
+Executed 10 tests, with 0 failures (0 unexpected) in 0.071 (0.077) seconds
+Test Suite 'LiveAuctionBidHistoryViewControllerTests' started at 2016-04-07 13:11:12.965
+Test Case '-[Artsy_Tests.LiveAuctionBidHistoryViewControllerTests cells__looks_right_for_open]' started.
+Test Case '-[Artsy_Tests.LiveAuctionBidHistoryViewControllerTests cells__looks_right_for_open]' passed (0.021 seconds).
+Test Case '-[Artsy_Tests.LiveAuctionBidHistoryViewControllerTests cells__looks_right_for_closed]' started.
+Test Case '-[Artsy_Tests.LiveAuctionBidHistoryViewControllerTests cells__looks_right_for_closed]' passed (0.006 seconds).
+Test Case '-[Artsy_Tests.LiveAuctionBidHistoryViewControllerTests cells__looks_right_for_bid]' started.
+Test Case '-[Artsy_Tests.LiveAuctionBidHistoryViewControllerTests cells__looks_right_for_bid]' passed (0.008 seconds).
+Test Case '-[Artsy_Tests.LiveAuctionBidHistoryViewControllerTests cells__looks_right_for_final_call]' started.
+Test Case '-[Artsy_Tests.LiveAuctionBidHistoryViewControllerTests cells__looks_right_for_final_call]' passed (0.007 seconds).
+Test Case '-[Artsy_Tests.LiveAuctionBidHistoryViewControllerTests cells__looks_right_for_fair_warning]' started.
+Test Case '-[Artsy_Tests.LiveAuctionBidHistoryViewControllerTests cells__looks_right_for_fair_warning]' passed (0.009 seconds).
+Test Suite 'LiveAuctionBidHistoryViewControllerTests' passed at 2016-04-07 13:11:13.020.
+Executed 5 tests, with 0 failures (0 unexpected) in 0.052 (0.055) seconds
+Test Suite 'LiveAuctionBidViewControllerSpecs' started at 2016-04-07 13:11:13.021
+Test Case '-[Artsy_Tests.LiveAuctionBidViewControllerSpecs looks_right_on_phones]' started.
+
+
+2016-04-07 13:13:00.073 Artsy[48558:11315966] CFNetwork SSLHandshake failed (-9806)
+
+
+Test Case '-[Artsy_Tests.LiveAuctionBidViewControllerSpecs looks_right_on_phones]' passed (111.855 seconds).
+Test Case '-[Artsy_Tests.LiveAuctionBidViewControllerSpecs updating__updates_when_new_events_come_in]' started.
+Test Case '-[Artsy_Tests.LiveAuctionBidViewControllerSpecs updating__updates_when_new_events_come_in]' passed (0.013 seconds).
+Test Case '-[Artsy_Tests.LiveAuctionBidViewControllerSpecs updating__ensures_the_bid_is_moved_above_the_current_max_bid]' started.
+Test Case '-[Artsy_Tests.LiveAuctionBidViewControllerSpecs updating__ensures_the_bid_is_moved_above_the_current_max_bid]' passed (0.014 seconds).
+Test Case '-[Artsy_Tests.LiveAuctionBidViewControllerSpecs networking__has_valid_snapshot_network_issues]' started.
+2016-04-07 13:13:04.945 Artsy[48558:11314806] Reference image save at: /Users/orta/dev/ios/apps/eigen/Artsy_Tests/ReferenceImages/LiveAuctionBidViewControllerTests/networking__has_valid_snapshot_network_issues@2x.png
+/Users/orta/dev/ios/apps/eigen/Artsy_Tests/View_Controller_Tests/Live_Auction/LiveAuctionBidViewControllerTests.swift:82: error: -[Artsy_Tests.LiveAuctionBidViewControllerSpecs networking__has_valid_snapshot_network_issues] : , got snapshot networking__has_valid_snapshot_network_issues successfully recorded, replace recordSnapshot with a check
+
+Test Case '-[Artsy_Tests.LiveAuctionBidViewControllerSpecs networking__has_valid_snapshot_network_issues]' failed (0.043 seconds).
+Test Case '-[Artsy_Tests.LiveAuctionBidViewControllerSpecs networking__has_valid_snapshot_waiting]' started.
+2016-04-07 13:13:04.982 Artsy[48558:11314806] Reference image save at: /Users/orta/dev/ios/apps/eigen/Artsy_Tests/ReferenceImages/LiveAuctionBidViewControllerTests/networking__has_valid_snapshot_waiting@2x.png
+/Users/orta/dev/ios/apps/eigen/Artsy_Tests/View_Controller_Tests/Live_Auction/LiveAuctionBidViewControllerTests.swift:82: error: -[Artsy_Tests.LiveAuctionBidViewControllerSpecs networking__has_valid_snapshot_waiting] : , got snapshot networking__has_valid_snapshot_waiting successfully recorded, replace recordSnapshot with a check
+
+Test Case '-[Artsy_Tests.LiveAuctionBidViewControllerSpecs networking__has_valid_snapshot_waiting]' failed (0.038 seconds).
+Test Case '-[Artsy_Tests.LiveAuctionBidViewControllerSpecs networking__has_valid_snapshot_sold]' started.
+2016-04-07 13:13:05.019 Artsy[48558:11314806] Reference image save at: /Users/orta/dev/ios/apps/eigen/Artsy_Tests/ReferenceImages/LiveAuctionBidViewControllerTests/networking__has_valid_snapshot_sold@2x.png
+/Users/orta/dev/ios/apps/eigen/Artsy_Tests/View_Controller_Tests/Live_Auction/LiveAuctionBidViewControllerTests.swift:82: error: -[Artsy_Tests.LiveAuctionBidViewControllerSpecs networking__has_valid_snapshot_sold] : , got snapshot networking__has_valid_snapshot_sold successfully recorded, replace recordSnapshot with a check
+
+Test Case '-[Artsy_Tests.LiveAuctionBidViewControllerSpecs networking__has_valid_snapshot_sold]' failed (0.050 seconds).
+Test Case '-[Artsy_Tests.LiveAuctionBidViewControllerSpecs networking__has_valid_snapshot_not_max_bidder]' started.
+2016-04-07 13:13:05.065 Artsy[48558:11314806] Reference image save at: /Users/orta/dev/ios/apps/eigen/Artsy_Tests/ReferenceImages/LiveAuctionBidViewControllerTests/networking__has_valid_snapshot_not_max_bidder@2x.png
+/Users/orta/dev/ios/apps/eigen/Artsy_Tests/View_Controller_Tests/Live_Auction/LiveAuctionBidViewControllerTests.swift:82: error: -[Artsy_Tests.LiveAuctionBidViewControllerSpecs networking__has_valid_snapshot_not_max_bidder] : , got snapshot networking__has_valid_snapshot_not_max_bidder successfully recorded, replace recordSnapshot with a check
+
+Test Case '-[Artsy_Tests.LiveAuctionBidViewControllerSpecs networking__has_valid_snapshot_not_max_bidder]' failed (0.036 seconds).
+Test Case '-[Artsy_Tests.LiveAuctionBidViewControllerSpecs networking__has_valid_snapshot_in_progress]' started.
+2016-04-07 13:13:05.101 Artsy[48558:11314806] Reference image save at: /Users/orta/dev/ios/apps/eigen/Artsy_Tests/ReferenceImages/LiveAuctionBidViewControllerTests/networking__has_valid_snapshot_in_progress@2x.png
+/Users/orta/dev/ios/apps/eigen/Artsy_Tests/View_Controller_Tests/Live_Auction/LiveAuctionBidViewControllerTests.swift:82: error: -[Artsy_Tests.LiveAuctionBidViewControllerSpecs networking__has_valid_snapshot_in_progress] : , got snapshot networking__has_valid_snapshot_in_progress successfully recorded, replace recordSnapshot with a check
+
+Test Case '-[Artsy_Tests.LiveAuctionBidViewControllerSpecs networking__has_valid_snapshot_in_progress]' failed (0.030 seconds).
+Test Case '-[Artsy_Tests.LiveAuctionBidViewControllerSpecs networking__has_valid_snapshot_is_max_bidder]' started.
+2016-04-07 13:13:05.131 Artsy[48558:11314806] Reference image save at: /Users/orta/dev/ios/apps/eigen/Artsy_Tests/ReferenceImages/LiveAuctionBidViewControllerTests/networking__has_valid_snapshot_is_max_bidder@2x.png
+/Users/orta/dev/ios/apps/eigen/Artsy_Tests/View_Controller_Tests/Live_Auction/LiveAuctionBidViewControllerTests.swift:82: error: -[Artsy_Tests.LiveAuctionBidViewControllerSpecs networking__has_valid_snapshot_is_max_bidder] : , got snapshot networking__has_valid_snapshot_is_max_bidder successfully recorded, replace recordSnapshot with a check
+
+Test Case '-[Artsy_Tests.LiveAuctionBidViewControllerSpecs networking__has_valid_snapshot_is_max_bidder]' failed (0.034 seconds).
+Test Suite 'LiveAuctionBidViewControllerSpecs' failed at 2016-04-07 13:13:05.139.
+Executed 9 tests, with 6 failures (0 unexpected) in 112.112 (112.118) seconds
+Test Suite 'LiveAuctionLotViewControllerTests' started at 2016-04-07 13:13:05.139
+Test Case '-[Artsy_Tests.LiveAuctionLotViewControllerTests snapshots__looks_good_for_closed_lots]' started.
+Test Case '-[Artsy_Tests.LiveAuctionLotViewControllerTests snapshots__looks_good_for_closed_lots]' passed (0.061 seconds).
+Test Case '-[Artsy_Tests.LiveAuctionLotViewControllerTests snapshots__looks_good_for_live_lots]' started.
+Test Case '-[Artsy_Tests.LiveAuctionLotViewControllerTests snapshots__looks_good_for_live_lots]' passed (0.062 seconds).
+Test Case '-[Artsy_Tests.LiveAuctionLotViewControllerTests snapshots__looks_good_for_upcoming_lots]' started.
+Test Case '-[Artsy_Tests.LiveAuctionLotViewControllerTests snapshots__looks_good_for_upcoming_lots]' passed (0.068 seconds).
+Test Case '-[Artsy_Tests.LiveAuctionLotViewControllerTests snapshots__doesnt_show_a_live_auction_call_to_action_when_auction_is_closed]' started.
+Test Case '-[Artsy_Tests.LiveAuctionLotViewControllerTests snapshots__doesnt_show_a_live_auction_call_to_action_when_auction_is_closed]' passed (0.066 seconds).
+Test Suite 'LiveAuctionLotViewControllerTests' passed at 2016-04-07 13:13:05.402.
+Executed 4 tests, with 0 failures (0 unexpected) in 0.258 (0.263) seconds
+Test Suite 'LiveAuctionSocketCommunicatorSpec' started at 2016-04-07 13:13:05.402
+Test Case '-[Artsy_Tests.LiveAuctionSocketCommunicatorSpec configures_the_socket_with_the_correct_host]' started.
+Connected: []
+Authenticated: []
+Joining sale
+Listening for socket events.
+Updated auction state: []
+Test Case '-[Artsy_Tests.LiveAuctionSocketCommunicatorSpec configures_the_socket_with_the_correct_host]' passed (0.002 seconds).
+Test Case '-[Artsy_Tests.LiveAuctionSocketCommunicatorSpec connects_the_socket_on_initialization]' started.
+Connected: []
+Authenticated: []
+Joining sale
+Listening for socket events.
+Updated auction state: []
+Test Case '-[Artsy_Tests.LiveAuctionSocketCommunicatorSpec connects_the_socket_on_initialization]' passed (0.939 seconds).
+Test Case '-[Artsy_Tests.LiveAuctionSocketCommunicatorSpec disconnects_the_socket_when_deallocated]' started.
+Connected: []
+Authenticated: []
+Joining sale
+Listening for socket events.
+Updated auction state: []
+Test Case '-[Artsy_Tests.LiveAuctionSocketCommunicatorSpec disconnects_the_socket_when_deallocated]' passed (0.002 seconds).
+Test Case '-[Artsy_Tests.LiveAuctionSocketCommunicatorSpec authenticates_the_socket_connection]' started.
+Connected: []
+Authenticated: []
+Joining sale
+Listening for socket events.
+Updated auction state: []
+Test Case '-[Artsy_Tests.LiveAuctionSocketCommunicatorSpec authenticates_the_socket_connection]' passed (0.004 seconds).
+Test Case '-[Artsy_Tests.LiveAuctionSocketCommunicatorSpec authenticated__joins_the_auction]' started.
+Connected: []
+Authenticated: []
+Joining sale
+Listening for socket events.
+Updated auction state: []
+Test Case '-[Artsy_Tests.LiveAuctionSocketCommunicatorSpec authenticated__joins_the_auction]' passed (0.015 seconds).
+Test Case '-[Artsy_Tests.LiveAuctionSocketCommunicatorSpec authenticated__listens_for_updated_auction_state]' started.
+Connected: []
+Authenticated: []
+Joining sale
+Listening for socket events.
+Updated auction state: []
+Test Case '-[Artsy_Tests.LiveAuctionSocketCommunicatorSpec authenticated__listens_for_updated_auction_state]' passed (0.002 seconds).
+Test Case '-[Artsy_Tests.LiveAuctionSocketCommunicatorSpec authenticated__sends_its_delegate_its_updated_auction_state]' started.
+Connected: []
+Authenticated: []
+Joining sale
+Listening for socket events.
+Updated auction state: []
+Updated auction state: [state!]
+Test Case '-[Artsy_Tests.LiveAuctionSocketCommunicatorSpec authenticated__sends_its_delegate_its_updated_auction_state]' passed (0.002 seconds).
+Test Suite 'LiveAuctionSocketCommunicatorSpec' passed at 2016-04-07 13:13:06.450.
+Executed 7 tests, with 0 failures (0 unexpected) in 0.965 (1.048) seconds
+Test Suite 'LiveAuctionStateFetcherSpec' started at 2016-04-07 13:13:06.450
+Test Case '-[Artsy_Tests.LiveAuctionStateFetcherSpec configures_its_sale_ID_correctly]' started.
+Test Case '-[Artsy_Tests.LiveAuctionStateFetcherSpec configures_its_sale_ID_correctly]' passed (0.002 seconds).
+Test Case '-[Artsy_Tests.LiveAuctionStateFetcherSpec configures_its_host_correctly]' started.
+Test Case '-[Artsy_Tests.LiveAuctionStateFetcherSpec configures_its_host_correctly]' passed (0.002 seconds).
+Test Case '-[Artsy_Tests.LiveAuctionStateFetcherSpec fetches_the_sale_state]' started.
+Test Case '-[Artsy_Tests.LiveAuctionStateFetcherSpec fetches_the_sale_state]' passed (0.002 seconds).
+Test Suite 'LiveAuctionStateFetcherSpec' passed at 2016-04-07 13:13:06.459.
+Executed 3 tests, with 0 failures (0 unexpected) in 0.006 (0.008) seconds
+Test Suite 'LiveAuctionStateManagerSpec' started at 2016-04-07 13:13:06.459
+Test Case '-[Artsy_Tests.LiveAuctionStateManagerSpec sets_its_saleID_upon_initialization]' started.
+
+
+Test Case '-[Artsy_Tests.LiveAuctionStateManagerSpec sets_its_saleID_upon_initialization]' passed (0.024 seconds).
+Test Case '-[Artsy_Tests.LiveAuctionStateManagerSpec creates_an_appropriate_socket_communicator]' started.
+
+Test Case '-[Artsy_Tests.LiveAuctionStateManagerSpec creates_an_appropriate_socket_communicator]' passed (0.031 seconds).
+Test Case '-[Artsy_Tests.LiveAuctionStateManagerSpec sets_itself_as_the_socket_communicator_delegate]' started.
+
+
+Test Case '-[Artsy_Tests.LiveAuctionStateManagerSpec sets_itself_as_the_socket_communicator_delegate]' passed (2.607 seconds).
+Test Case '-[Artsy_Tests.LiveAuctionStateManagerSpec invokes_the_state_reconciler_when_new_snapshot_data_avaialble]' started.
+
+
+
+Test Case '-[Artsy_Tests.LiveAuctionStateManagerSpec invokes_the_state_reconciler_when_new_snapshot_data_avaialble]' passed (0.006 seconds).
+Test Suite 'LiveAuctionStateManagerSpec' passed at 2016-04-07 13:13:09.130.
+Executed 4 tests, with 0 failures (0 unexpected) in 2.668 (2.671) seconds
+Test Suite 'LiveAuctionStateReconcilerSpec' started at 2016-04-07 13:13:09.131
+Test Case '-[Artsy_Tests.LiveAuctionStateReconcilerSpec doesn_t_do_anything_if_there_are_no_lots]' started.
+Test Case '-[Artsy_Tests.LiveAuctionStateReconcilerSpec doesn_t_do_anything_if_there_are_no_lots]' passed (0.002 seconds).
+Test Case '-[Artsy_Tests.LiveAuctionStateReconcilerSpec doesn_t_do_anything_if_there_is_no_sale]' started.
+Test Case '-[Artsy_Tests.LiveAuctionStateReconcilerSpec doesn_t_do_anything_if_there_is_no_sale]' passed (0.002 seconds).
+Test Case '-[Artsy_Tests.LiveAuctionStateReconcilerSpec doesn_t_do_anything_if_there_are_no_sale_s_lots]' started.
+Test Case '-[Artsy_Tests.LiveAuctionStateReconcilerSpec doesn_t_do_anything_if_there_are_no_sale_s_lots]' passed (0.002 seconds).
+Test Case '-[Artsy_Tests.LiveAuctionStateReconcilerSpec doesn_t_do_anything_if_there_is_no_current_lot_id]' started.
+Test Case '-[Artsy_Tests.LiveAuctionStateReconcilerSpec doesn_t_do_anything_if_there_is_no_current_lot_id]' passed (0.002 seconds).
+Test Case '-[Artsy_Tests.LiveAuctionStateReconcilerSpec doesn_t_do_anything_if_there_are_no_lot_events__list_is_empty_]' started.
+Test Case '-[Artsy_Tests.LiveAuctionStateReconcilerSpec doesn_t_do_anything_if_there_are_no_lot_events__list_is_empty_]' passed (0.003 seconds).
+Test Case '-[Artsy_Tests.LiveAuctionStateReconcilerSpec sends_fresh_lots_on_first_update]' started.
+Test Case '-[Artsy_Tests.LiveAuctionStateReconcilerSpec sends_fresh_lots_on_first_update]' passed (0.002 seconds).
+Test Case '-[Artsy_Tests.LiveAuctionStateReconcilerSpec sends_current_lot]' started.
+Test Case '-[Artsy_Tests.LiveAuctionStateReconcilerSpec sends_current_lot]' passed (0.003 seconds).
+Test Case '-[Artsy_Tests.LiveAuctionStateReconcilerSpec orders_lots_correctly]' started.
+Test Case '-[Artsy_Tests.LiveAuctionStateReconcilerSpec orders_lots_correctly]' passed (0.003 seconds).
+Test Case '-[Artsy_Tests.LiveAuctionStateReconcilerSpec on_subsequent_state_update__does_not_send_lots]' started.
+Test Case '-[Artsy_Tests.LiveAuctionStateReconcilerSpec on_subsequent_state_update__does_not_send_lots]' passed (0.003 seconds).
+Test Case '-[Artsy_Tests.LiveAuctionStateReconcilerSpec on_subsequent_state_update__does_not_send_sale]' started.
+Test Case '-[Artsy_Tests.LiveAuctionStateReconcilerSpec on_subsequent_state_update__does_not_send_sale]' passed (0.006 seconds).
+Test Case '-[Artsy_Tests.LiveAuctionStateReconcilerSpec on_subsequent_state_update__does_not_send_current_lot_if_it_has_not_changed]' started.
+Test Case '-[Artsy_Tests.LiveAuctionStateReconcilerSpec on_subsequent_state_update__does_not_send_current_lot_if_it_has_not_changed]' passed (0.006 seconds).
+Test Case '-[Artsy_Tests.LiveAuctionStateReconcilerSpec on_subsequent_state_update__sends_new_current_lot_when_the_lot_changes]' started.
+Test Case '-[Artsy_Tests.LiveAuctionStateReconcilerSpec on_subsequent_state_update__sends_new_current_lot_when_the_lot_changes]' passed (0.007 seconds).
+Test Case '-[Artsy_Tests.LiveAuctionStateReconcilerSpec on_subsequent_state_update__updates_lot_view_model_with_new_events]' started.
+Test Case '-[Artsy_Tests.LiveAuctionStateReconcilerSpec on_subsequent_state_update__updates_lot_view_model_with_new_events]' passed (0.004 seconds).
+Test Case '-[Artsy_Tests.LiveAuctionStateReconcilerSpec on_subsequent_state_update__doesn_t_update_lot_view_model_with_events_that_aren_t_new]' started.
+Test Case '-[Artsy_Tests.LiveAuctionStateReconcilerSpec on_subsequent_state_update__doesn_t_update_lot_view_model_with_events_that_aren_t_new]' passed (0.004 seconds).
+Test Case '-[Artsy_Tests.LiveAuctionStateReconcilerSpec on_subsequent_state_update__updates_lot_view_model_with_online_asking_price]' started.
+Test Case '-[Artsy_Tests.LiveAuctionStateReconcilerSpec on_subsequent_state_update__updates_lot_view_model_with_online_asking_price]' passed (0.004 seconds).
+Test Case '-[Artsy_Tests.LiveAuctionStateReconcilerSpec on_subsequent_state_update__updates_lot_view_model_with_reserve_status]' started.
+Test Case '-[Artsy_Tests.LiveAuctionStateReconcilerSpec on_subsequent_state_update__updates_lot_view_model_with_reserve_status]' passed (0.003 seconds).
+Test Case '-[Artsy_Tests.LiveAuctionStateReconcilerSpec on_subsequent_state_update__sends_lots_when_number_of_lots_change]' started.
+Test Case '-[Artsy_Tests.LiveAuctionStateReconcilerSpec on_subsequent_state_update__sends_lots_when_number_of_lots_change]' passed (0.005 seconds).
+Test Case '-[Artsy_Tests.LiveAuctionStateReconcilerSpec on_subsequent_state_update__sends_updated_sale_availability_if_changed]' started.
+Test Case '-[Artsy_Tests.LiveAuctionStateReconcilerSpec on_subsequent_state_update__sends_updated_sale_availability_if_changed]' passed (0.006 seconds).
+Test Case '-[Artsy_Tests.LiveAuctionStateReconcilerSpec on_subsequent_state_update__doesn_t_send_updated_sale_availability_if_not_changed]' started.
+Test Case '-[Artsy_Tests.LiveAuctionStateReconcilerSpec on_subsequent_state_update__doesn_t_send_updated_sale_availability_if_not_changed]' passed (0.006 seconds).
+Test Suite 'LiveAuctionStateReconcilerSpec' passed at 2016-04-07 13:13:09.356.
+Executed 19 tests, with 0 failures (0 unexpected) in 0.074 (0.225) seconds
+Test Suite 'LiveAuctionStaticDataFetcherSpec' started at 2016-04-07 13:13:09.356
+Test Case '-[Artsy_Tests.LiveAuctionStaticDataFetcherSpec configures_its_sale_ID_correctly]' started.
+Test Case '-[Artsy_Tests.LiveAuctionStaticDataFetcherSpec configures_its_sale_ID_correctly]' passed (0.002 seconds).
+Test Case '-[Artsy_Tests.LiveAuctionStaticDataFetcherSpec fetches_the_static_data]' started.
+
+
+/Users/orta/dev/ios/apps/eigen/Artsy_Tests/Networking_Tests/Live_Auctions/LiveAuctionStaticDataFetcherSpec.swift:34: error: -[Artsy_Tests.LiveAuctionStaticDataFetcherSpec fetches_the_static_data] : expected to equal <{id = "sale_id";}>, got <nil> (use beNil() to match nils)
+
+Test Case '-[Artsy_Tests.LiveAuctionStaticDataFetcherSpec fetches_the_static_data]' failed (0.037 seconds).
+Test Suite 'LiveAuctionStaticDataFetcherSpec' failed at 2016-04-07 13:13:09.396.
+Executed 2 tests, with 1 failure (0 unexpected) in 0.038 (0.040) seconds
+Test Suite 'Artsy Tests.xctest' failed at 2016-04-07 13:13:09.397.
+Executed 63 tests, with 7 failures (0 unexpected) in 116.244 (116.509) seconds
+Test Suite 'Quick.framework' started at 2016-04-07 13:13:09.398
+Test Suite 'Quick.framework' passed at 2016-04-07 13:13:09.398.
+Executed 0 tests, with 0 failures (0 unexpected) in 0.000 (0.000) seconds
+Test Suite 'Specta.framework' started at 2016-04-07 13:13:09.399
+Test Suite 'Specta.framework' passed at 2016-04-07 13:13:09.399.
+Executed 0 tests, with 0 failures (0 unexpected) in 0.000 (0.000) seconds
+Test Suite 'FBSnapshotTestCase.framework' started at 2016-04-07 13:13:09.400
+Test Suite 'FBSnapshotTestCase.framework' passed at 2016-04-07 13:13:09.456.
+Executed 0 tests, with 0 failures (0 unexpected) in 0.000 (0.056) seconds
+Test Suite 'Selected tests' failed at 2016-04-07 13:13:09.456.
+Executed 63 tests, with 7 failures (0 unexpected) in 116.244 (116.570) seconds
+
+
+Test session log:
+/Users/orta/Library/Developer/Xcode/DerivedData/Artsy-exhciswyomputsenvihzexoyuznk/Logs/Test/74FDAD03-6F93-498B-83D5-6CA91F36DF6E/Session-2016-04-07_13:09:10-pJRMDc.log
+

@@ -112,7 +112,6 @@
 
 - (NSArray *)uniqueDiffCommands
 {
-
     NSOrderedSet *commands = [NSOrderedSet orderedSetWithArray: [self.commands filteredArrayUsingPredicate:[NSPredicate predicateWithBlock:^BOOL(ORKaleidoscopeCommand *command, NSDictionary *bindings) {
         return command.fails;
     }]]];

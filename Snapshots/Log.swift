@@ -5,6 +5,10 @@ class Log: NSObject, NSCopying {
     let path: Path
     var parsed: Bool = false
 
+    var valid: Bool {
+        return hasSnapshotErrors || hasNewSnapshots
+    }
+
     var hasSnapshotErrors: Bool {
         return snapshotErrors.isEmpty == false
     }

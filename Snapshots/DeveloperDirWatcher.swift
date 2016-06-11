@@ -22,11 +22,13 @@ class DeveloperDirWatcher: NSObject {
             Async.main { self.appNamesUpdateSignal.update(sorted) }
 
             for app in apps {
-                self.getLogsForApp(app.name).next { app.logs = $0.map { Log(path: $0) } }
+                self.getLogsForApp(app.name).next {
+                    app.logs = $0.map { Log(path: $0) }
+                    Async.main { self.appsWithMetadataUpdatedSignal.update(sorted) }
+                }
             }
 
             Async.main { self.appsWithMetadataUpdatedSignal.update(sorted) }
-
         }
     }
 
@@ -49,7 +51,7 @@ class DeveloperDirWatcher: NSObject {
 
     func getLogsForApp(name: String) -> Signal<[Path]> {
         let appLogs = self.library + self.derivedDataDir + name + "Logs" + "Test"
-        let queries = ["replace recordSnapshot with a check", "successfully recorded"]
+        let queries = ["replace recordSnapshot with a check", "expected a matching snapshot"]
         return Grepper.getPathsMatchingPattern(queries, fromPath: appLogs)
     }
 }

@@ -17,6 +17,8 @@ class LogSnapshotsPreviewViewController: NSViewController {
             self.log = log
             self.imageBrowser.reloadData()
             self.titleTextField.stringValue = log.title
+            print("OK \(log.valid) errors")
+
         }
     }
 

@@ -3,7 +3,6 @@
 #import "NSString+StringBetweenStrings.h"
 
 @interface ORLogReader()
-@property (nonatomic, readonly, strong) NSMutableString *mutableLog;
 @property (nonatomic, readwrite, assign) BOOL hasCGErrors;
 @property (nonatomic, readonly, strong) NSMutableOrderedSet *mutableTestSuites;
 @property (nonatomic, readonly, strong) NSMutableOrderedSet *mutableDiffCommands;
@@ -17,7 +16,10 @@
     self = [super init];
     if (!self) return nil;
 
-    [self erase];
+    _mutableDiffCommands = [NSMutableOrderedSet orderedSet];
+    _mutableTestSuites = [NSMutableOrderedSet orderedSet];
+    _mutableSnapshotCreations = [NSMutableOrderedSet orderedSet];
+    _hasCGErrors = NO;
 
     return self;
 }
@@ -36,8 +38,6 @@
 
 - (void)readLog:(NSString *)log
 {
-    [self.mutableLog appendString:log];
- 
     for (NSString *line in [log componentsSeparatedByCharactersInSet:NSCharacterSet.newlineCharacterSet]) {
         if ([line rangeOfString:@"Test Suite"].location != NSNotFound) {
             ORTestSuite *suite = [ORTestSuite suiteFromString:line];
@@ -130,15 +130,5 @@
 {
     return _mutableSnapshotCreations.array;
 }
-
-- (void)erase
-{
-    _mutableLog = [NSMutableString string];
-    _mutableDiffCommands = [NSMutableOrderedSet orderedSet];
-    _mutableTestSuites = [NSMutableOrderedSet orderedSet];
-    _mutableSnapshotCreations = [NSMutableOrderedSet orderedSet];
-    _hasCGErrors = NO;
-}
-
 
 @end

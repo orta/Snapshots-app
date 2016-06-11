@@ -17,6 +17,8 @@ class Grepper: NSObject {
             for pattern in patterns { arguments.append("-e"); arguments.append(pattern) }
             arguments.append(fromPath.rawValue)
 
+            // print("grep ", arguments.joinWithSeparator(" "))
+
             task.arguments = arguments
             task.standardOutput = pipe
             task.launch()
@@ -31,6 +33,12 @@ class Grepper: NSObject {
 
             let pathStrings = pathString.componentsSeparatedByCharactersInSet(NSCharacterSet.newlineCharacterSet())
 
+            guard pathString.length > 0 else {
+                Async.main { signal.update([]) }
+                return
+            }
+
+            print("Found useful test logs:", pathStrings)
             Async.main { signal.update(pathStrings.map { Path($0) }) }
         }
 

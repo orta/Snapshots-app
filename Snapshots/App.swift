@@ -29,13 +29,14 @@ class App: NSObject, NSCopying {
             for log in self.logs {
                 // look into http://blog.krzyzanowskim.com/2015/01/10/nsscanner-for-raw-data-and-files/ ?
 
-                guard let content = try? NSString(contentsOfURL: log.path.URL, encoding: NSUTF16StringEncoding) as String else { continue }
+                guard let content = try? NSString(contentsOfURL: log.path.URL, encoding: NSUTF8StringEncoding) as String else { continue }
+                if log.path.contains("SOKKWK") {
+                    print("OK")
+                }
 
                 self.reader.readLog(content)
                 log.updateWithReader(self.reader)
-                self.reader.erase()
             }
         }
-
     }
 }

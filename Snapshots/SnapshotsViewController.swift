@@ -24,9 +24,7 @@ class SnapshotsViewController: NSViewController {
         }
 
         sourceListDelegate.appSelected.next { app in
-            let date = NSDate()
             self.dev.getLogsForApp(app.name).next { paths in
-                print(date.timeIntervalSinceNow)
                 app.logs = paths.map { Log(path: $0) }
 
                 self.logsDataSource.logsForSelectedApp = app.logs
@@ -38,6 +36,10 @@ class SnapshotsViewController: NSViewController {
             let s = self.snapshotsPreviewController
             s.newLogSelected.update(log)
         }
+    }
+
+    @IBAction func reloadAppsForSnapshots(sender: AnyObject) {
+        dev.startParsing()
     }
 
     var splitController: NSSplitViewController {

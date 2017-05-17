@@ -1,5 +1,9 @@
 # Snapshots App for Xcode
 
+Ignore this, see https://github.com/Antondomashnev/FBSnapshotsViewer
+
+---
+
 ### An App to show the state of FBSnapshot Tests.
 
 I think Facebook have [view testing](https://github.com/facebook/ios-snapshot-test-case) right.  So I build
